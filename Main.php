@@ -25,6 +25,9 @@
                 // Extend the admin menu
                 \Idno\Core\site()->template()->extendTemplate('admin/menu/items','applytojoin/menu');
 
+                // Extend the login page
+                \Idno\Core\site()->template()->extendTemplate('session/login','applytojoin/login');
+
             }
 
         }
