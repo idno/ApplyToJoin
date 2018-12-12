@@ -1,1 +1,5 @@
-<li <?php if ($_SERVER['REQUEST_URI'] == '/admin/applytojoin/') echo 'class="active"'; ?>><a href="/admin/applytojoin/">Membership Applications</a></li>
+<li <?php if (preg_match('/\/admin\/applytojoin\/$/', $_SERVER['REQUEST_URI'])) echo 'class="active"'; ?>>
+    <a href="<?php echo \Idno\Core\Idno::site()->config()->url?>admin/applytojoin/">
+    <?php echo \Idno\Core\Idno::site()->language()->_('Membership Applications'); ?>
+    </a>
+</li>
