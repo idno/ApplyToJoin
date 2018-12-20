@@ -55,7 +55,7 @@
                             $t = clone \Idno\Core\site()->template();
                             $t->setTemplateType('email');
 
-                            foreach(\Idno\Core\Admin::getAdmins() as $admin) {
+                            foreach(\Idno\Core\Admin::getAdmins(100, 0) as $admin) {
                                 $email_message = new Email();
                                 $email_message->setSubject("You have a new membership application!");
                                 $email_message->addTo($admin->email);
